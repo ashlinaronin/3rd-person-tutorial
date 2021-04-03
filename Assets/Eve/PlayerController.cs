@@ -8,7 +8,7 @@ public class PlayerController : MonoBehaviour
     Vector2 moveDirection;
     public float moveSpeed = 2;
     public float maxForwardSpeed = 8;
-    float desiredForwardSpeed;
+    float desiredSpeed;
     float forwardSpeed;
 
     const float groundAcceleration = 5;
@@ -30,16 +30,18 @@ public class PlayerController : MonoBehaviour
 
     void Move(Vector2 direction)
     {
+        float forwardDirection = direction.y;
+
         // clamp direction vector to magnitude of 1
         if (direction.sqrMagnitude > 1f)
         {
             direction.Normalize();
         }
 
-        desiredForwardSpeed = direction.magnitude * maxForwardSpeed;
+        desiredSpeed = direction.magnitude * maxForwardSpeed * Mathf.Sign(forwardDirection);
         float acceleration = IsMoveInput ? groundAcceleration : groundDeceleration;
 
-        forwardSpeed = Mathf.MoveTowards(forwardSpeed, desiredForwardSpeed, acceleration * Time.deltaTime);
+        forwardSpeed = Mathf.MoveTowards(forwardSpeed, desiredSpeed, acceleration * Time.deltaTime);
         animator.SetFloat("ForwardSpeed", forwardSpeed);
     }
 
