@@ -58,6 +58,11 @@ public class PlayerController : MonoBehaviour
     void Jump(float direction)
     {
         Debug.Log(direction);
+
+        if (direction > 0)
+        {
+            animator.SetBool("ReadyJump", true);
+        }
     }
 
     // Start is called before the first frame update
