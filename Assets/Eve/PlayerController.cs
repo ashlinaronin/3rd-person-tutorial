@@ -6,6 +6,7 @@ using UnityEngine.InputSystem;
 public class PlayerController : MonoBehaviour
 {
     Vector2 moveDirection;
+    float jumpDirection;
     public float moveSpeed = 2;
     public float maxForwardSpeed = 8;
     public float turnSpeed = 100;
@@ -29,6 +30,11 @@ public class PlayerController : MonoBehaviour
         moveDirection = context.ReadValue<Vector2>();
     }
 
+    public void OnJump(InputAction.CallbackContext context)
+    {
+        jumpDirection = context.ReadValue<float>();
+    }
+
     void Move(Vector2 direction)
     {
         float turnAmount = direction.x;
@@ -49,6 +55,11 @@ public class PlayerController : MonoBehaviour
         transform.Rotate(0, turnAmount * turnSpeed * Time.deltaTime, 0);
     }
 
+    void Jump(float direction)
+    {
+        Debug.Log(direction);
+    }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -59,5 +70,6 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         Move(moveDirection);
+        Jump(jumpDirection);
     }
 }
