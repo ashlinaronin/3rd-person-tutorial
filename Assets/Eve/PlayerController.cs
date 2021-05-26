@@ -12,11 +12,14 @@ public class PlayerController : MonoBehaviour
     public float turnSpeed = 100;
     float desiredSpeed;
     float forwardSpeed;
+    float jumpSpeed = 30000f;
+    bool readyJump = false;
 
     const float groundAcceleration = 5;
     const float groundDeceleration = 25;
 
     Animator animator;
+    Rigidbody rigidBody;
 
     bool IsMoveInput
     {
@@ -57,18 +60,33 @@ public class PlayerController : MonoBehaviour
 
     void Jump(float direction)
     {
-        Debug.Log(direction);
+        //Debug.Log(direction);
 
         if (direction > 0)
         {
             animator.SetBool("ReadyJump", true);
+            readyJump = true;
         }
+        else if (readyJump)
+        {
+            animator.SetBool("Launch", true);
+        }
+    }
+
+    // todo: this isn't quite working-- she's not flying in the air
+    // like
+    public void Launch()
+    {
+        rigidBody.AddForce(0, jumpSpeed, 0);
+        animator.SetBool("Launch", false);
+        animator.applyRootMotion = false;
     }
 
     // Start is called before the first frame update
     void Start()
     {
         animator = GetComponent<Animator>();
+        rigidBody = GetComponent<Rigidbody>();
     }
 
     // Update is called once per frame
