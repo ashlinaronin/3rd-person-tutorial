@@ -1,32 +1,12 @@
 fileFormatVersion: 2
-guid: 63417ac390563484297068d767132086
+guid: 0482b42de30a24ef8a62477e1ad26e72
 ModelImporter:
   serializedVersion: 20200
   internalIDToNameTable:
   - first:
       74: -203655887218126122
-    second: mixamo.com
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: SpacePirate_M
-    second: {fileID: 2100000, guid: 5e23f8e7f7e0247feb9206bf97ba1a0f, type: 2}
-  - first:
-      type: UnityEngine:Texture2D
-      assembly: UnityEngine.CoreModule
-      name: SpacePirate_diffuse
-    second: {fileID: 2800000, guid: f438098adefc74a1aac7f72c3a3af7f2, type: 3}
-  - first:
-      type: UnityEngine:Texture2D
-      assembly: UnityEngine.CoreModule
-      name: SpacePirate_normal
-    second: {fileID: 2800000, guid: 80cc5d94bf0d5459e8b080d3e9f6e9dc, type: 3}
-  - first:
-      type: UnityEngine:Texture2D
-      assembly: UnityEngine.CoreModule
-      name: SpacePirate_specular
-    second: {fileID: 2800000, guid: 6014a79ebfb41499a8254164ea27fd15, type: 3}
+    second: Running Jump
+  externalObjects: {}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -53,7 +33,36 @@ ModelImporter:
     animationWrapMode: 0
     extraExposedTransformPaths: []
     extraUserProperties: []
-    clipAnimations: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Running Jump
+      takeName: mixamo.com
+      internalID: 0
+      firstFrame: 0
+      lastFrame: 27
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 1
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
     isReadable: 0
   meshes:
     lODScreenPercentages: []
@@ -95,21 +104,7 @@ ModelImporter:
     legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
     blendShapeNormalImportMode: 1
     normalSmoothingSource: 0
-  referencedClips:
-  - 9722e444241854a0e8dcc343c2a77100
-  - a246e65a7ee73460faa84629024a7448
-  - 93432a7ef6bf54810b2b026ce9009943
-  - f3514dd63428349f9be9d676aa865730
-  - 4050cce62ea8e43acb7a40fc76ba1794
-  - 6cac4cfbf434c40988ee8e3f966985ba
-  - 0014ce1302d1f433a8a9ce9aaebab697
-  - 978a2596204e1425e80cffc293d539f2
-  - ed4c4a62bea8941cd8a39802125fac62
-  - 88c20d3b1ebae40e29215e4d93a33562
-  - 7a5d305c5e2104a29b3d832daa0674b4
-  - 0482b42de30a24ef8a62477e1ad26e72
-  - 29450b4c59ad8417ab7884092cf78411
-  - 74dc31f4d40cb492eaa09596a48f8956
+  referencedClips: []
   importAnimation: 1
   humanDescription:
     serializedVersion: 3
@@ -878,11 +873,11 @@ ModelImporter:
     hasTranslationDoF: 0
     hasExtraRoot: 1
     skeletonHasParents: 1
-  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  lastHumanDescriptionAvatarSource: {fileID: 9000000, guid: 63417ac390563484297068d767132086, type: 3}
   autoGenerateAvatarMappingIfUnspecified: 1
   animationType: 3
   humanoidOversampling: 1
-  avatarSetup: 1
+  avatarSetup: 2
   addHumanoidExtraRootOnlyWhenUsingAvatar: 1
   additionalBone: 0
   userData: 
